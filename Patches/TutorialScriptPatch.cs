@@ -19,8 +19,12 @@ namespace MageArenaAudioChanger.Patches
             for (int i = 0; i < __instance.tgob.clipagios.Length; i++)
             {
                 var newClip = MainMenuManagerPatch.tutorialClips.FirstOrDefault(clip => clip.Key == __instance.tgob.clipagios[i].name);
-                __instance.tgob.clipagios[i] = newClip.Value;
-                MageArenaAudioChanger.Logger.LogInfo($"{newClip.Key} Replaced");
+                if (newClip.Key != null)
+                {
+                    __instance.tgob.clipagios[i] = newClip.Value;
+                    MageArenaAudioChanger.Logger.LogInfo($"{newClip.Key} Replaced");
+                }
+                
             }
             return true;
         }
