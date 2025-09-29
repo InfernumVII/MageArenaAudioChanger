@@ -1,0 +1,12 @@
+PlayerRespawnManager/gameclips/sorcerersbanished.wav
+PlayerRespawnManager/gameclips/warlocksbanished.wav
+PlayerRespawnManager/gameclips/victory.wav
+PlayerRespawnManager/gameclips/defeat.wav
+PlayerRespawnManager/AnouncerDeathClips/1sslain.wav
+PlayerRespawnManager/AnouncerDeathClips/2sslain.wav
+PlayerRespawnManager/AnouncerDeathClips/3sslain.wav
+PlayerRespawnManager/AnouncerDeathClips/4sslain.wav
+PlayerRespawnManager/AnouncerDeathClips/wslain.wav
+PlayerRespawnManager/AnouncerDeathClips/2wslain.wav
+PlayerRespawnManager/AnouncerDeathClips/3wslain.wav
+PlayerRespawnManager/AnouncerDeathClips/4wslain.wav
