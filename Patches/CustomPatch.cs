@@ -17,14 +17,14 @@ public static class CustomPatch
                     object value = field.GetValue(behaviour);
                     if (value is AudioClip[] audioClipsArray && audioClipsArray != null)
                     {
-                        foreach (AudioClip singleClip in audioClipsArray)
+                        for (int i = 0; i < audioClipsArray.Length; i++)
                         {
-                            ReplaceClip(singleClip);
+                            ReplaceClip(ref audioClipsArray[i]);
                         }
                     }
                     else if (value is AudioClip singleClip && singleClip != null)
                     {
-                        ReplaceClip(singleClip);
+                        ReplaceClip(ref singleClip);
                     }
                 }
                 catch { }
@@ -35,9 +35,10 @@ public static class CustomPatch
         return true;
     }
 
-    private static void ReplaceClip(AudioClip clipToReplace)
+    private static void ReplaceClip(ref AudioClip clipToReplace)
     {
-        var customClip = MageArenaAudioChanger.clips.FirstOrDefault(clip => clip.Key == clipToReplace.name);
+        var clipName = clipToReplace.name;
+        var customClip = MageArenaAudioChanger.clips.FirstOrDefault(clip => clip.Key == clipName);
         if (customClip.Key != null)
         {
             clipToReplace = customClip.Value;
